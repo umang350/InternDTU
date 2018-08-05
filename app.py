@@ -10,15 +10,15 @@ import datetime
 
 app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'memcached'
-app.config['SECRET_KEY'] = 'super secret key'
+app.config['SECRET_KEY'] = 'some key'
 
 # git clone https://github.com/umang350/flaskblogsip.git
 # mysql -h flasktest.ccrvuveqgzmp.ap-south-1.rds.amazonaws.com -u umang350root -p flasktest
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'flasktest.ccrvuveqgzmp.ap-south-1.rds.amazonaws.com'
-app.config['MYSQL_USER'] = 'umang350root'
-app.config['MYSQL_PASSWORD'] = 'umang350root'
+app.config['MYSQL_HOST'] = 'rds host'
+app.config['MYSQL_USER'] = 'user'
+app.config['MYSQL_PASSWORD'] = 'pass'
 
 # app.config['MYSQL_HOST'] = 'localhost'
 # app.config['MYSQL_USER'] = 'root'
@@ -30,8 +30,8 @@ app.config['MAIL_SERVER'] = 'smtp.zoho.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = 0
 app.config['MAIL_USE_SSL'] = 1
-app.config['MAIL_USERNAME'] = 'InternDTU@ecelldtu.in'
-app.config['MAIL_PASSWORD'] = '9899261600'
+app.config['MAIL_USERNAME'] = 'email'
+app.config['MAIL_PASSWORD'] = 'pass'
 app.config['MAIL_DEFAULT_SENDER'] = 'InternDTU@ecelldtu.in'
 # init MySQL
 mysql = MySQL(app)
