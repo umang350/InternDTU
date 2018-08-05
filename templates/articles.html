@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+  <h1 style="padding-bottom: 11px;font-family: monospace;font-weight: bolder;color: white;">Internships Available:</h1>
+  <ul class="list-group">
+  	<a href="quiz"><li class="list-group-item btn btn-outline-primary" style="margin-bottom: 8px;text-align: left; white-space: normal;word-wrap: break-word; float: left; width: 100%; background-color: #089005;color: white; font-weight: bold; border: white 2px solid;">
+  		Orientation Quiz : Answer Here to Win great prizes
+  	</li></a>
+  {% for article in articles  %}
+    <a href="internship/{{article.id}}"><li class="list-group-item btn btn-outline-primary" style="margin-bottom: 8px;text-align: left; white-space: normal;word-wrap: break-word; float: left; width: 100%; background-color: #103dfe;color: white; font-weight: bold; border: white 2px solid;">{{article.title}} by {{article.company}} &nbsp; <span style="float: right; font-size: 14px">Stipend(INR) : {{article.grade}}</span><span class="clear"></span></li></a>
+  {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

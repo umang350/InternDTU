@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79); ">
+    <h1 style="color: white">Welcome to InternDTU</h1>
+
+    <p class="lead" style="color: white"> An exclusive internship portal for Delhi Technological University Students</p>
+    {% if session.logged_in == NULL %}
+    <br>
+      <a href="/register" style="margin-top: 10px;" class="btn btn-primary btn-lg">Register</a>
+      <a href="/login" style="margin-top: 10px;" class="btn btn-success btn-lg">Login</a>
+    <br>
+    {% else %}
+    <br>
+      <a href="/dashboard" style="margin-top: 10px;" class="btn btn-primary btn-lg">Dashboard</a>
+      <a href="/internships" style="margin-top: 10px;" class="btn btn-success btn-lg">Internships</a>
+    <br>
+    {% endif %}
+    <br>
+    <p class="lead" style="color: white"> Powered By :</p>
+    <a href="http://www.ecelldtu.in"><img src="{{ url_for('static', filename='ecell.png') }}" style="width: 134px;"></a>
+
+
+  </div>
+  <center>
+   <div class="jumbotron text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79);  padding: 3px;">
+    <div class="lead">
+      <a href='https://play.google.com/store/apps/details?id=com.ecelldtu.ip&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' style="width: 198px;" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+      <p style="font-size: 10px; color: white">Legal attribution: Google Play and the Google Play logo are trademarks of Google LLC.</p></div>
+    </div>
+  </div>
+  </center>
+{% endblock %}

@@ -1,0 +1,54 @@
+create table details (id int(11) AUTO_INCREMENT PRIMARY KEY, 
+					username VARCHAR(100), 
+					name VARCHAR(100),
+					 title VARCHAR(100), 
+					 body VARCHAR(255), 
+					 skills VARCHAR(400), 
+					 grade VARCHAR(20), 
+					 mobile VARCHAR(10),
+					 branch VARCHAR(10),
+					 year VARCHAR(10), 
+					 email VARCHAR(100), 
+					 register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+create table articles (id int(11) AUTO_INCREMENT PRIMARY KEY, 
+					profile TEXT, 
+					title VARCHAR(100), 
+					company VARCHAR(255), 
+					skills TEXT, 
+					grade VARCHAR(20), 
+					info TEXT, 
+					register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+create table application (internship_id int(11), 
+						application_table int(11) AUTO_INCREMENT PRIMARY KEY, 
+						username VARCHAR(100), 
+						whyhire TEXT, 
+						prevexp TEXT, 
+						skillsrelated TEXT ,
+						apply_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+						other TEXT);
+
+create table users (id int(11) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), 
+					email VARCHAR(100), 
+					username VARCHAR(30), 
+					password VARCHAR(100), 
+					authenticated INT(1) DEFAULT 0, 
+					email_confirmation_sent_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+					email_confirmed INT(1)  DEFAULT 0, 
+					email_confirmed_on TIMESTAMP, 
+					mobile INT(13) DEFAULT 0;
+					register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+					isadmin INT(1) DEFAULT 0, 
+					resume INT(1) default 0);
+
+create table ticket (id INT(10) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100), mobile VARCHAR(100), seller VARCHAR(255), paid VARCHAR(10), balance VARCHAR(10), time timestamp default current_timestamp);
+
+create table quiz (id int(11) AUTO_INCREMENT PRIMARY KEY, 
+					name VARCHAR(200), 
+					username VARCHAR(255), 
+					ans TEXT, 
+					mobile VARCHAR(13), 
+					email VARCHAR(200), 
+					register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+

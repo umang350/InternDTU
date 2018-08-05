@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-left" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79); padding: 20px ">
+  <h1 style="color: white">Add Details for Resume</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.title, class="form-control")}}
+    </div>
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.body, class="form-control", id="editor")}}
+    </div>
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.skills, class="form-control")}}
+    </div>
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.grade, class="form-control")}}
+    </div>
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.branch, class="form-control")}}
+    </div>
+    <div class="form-group" style="font-size: 2.8em;color: white;font-family: monospace;font-weight: bold;">
+      {{render_field(form.year, class="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+</div>
+{% endblock %}

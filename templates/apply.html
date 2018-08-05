@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-left" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79); padding: 20px ">
+  <h1  style="color: white">Application Form for {{article.title}} by {{article.company}}</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.whyhire, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.prevexp, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.skillsrelated, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.other, class="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+</div>
+{% endblock %}

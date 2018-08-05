@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+  <h1 style="color: white">Current Quiz Answers:</h1>
+
+  
+  <table class="table table-dark table-stripped">
+    <tr>
+      <th>ID </th>
+      <th>Name</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Answer</th>
+      <th>Username</th>
+    </tr>
+    {% for article in articles %}
+    <tr>
+      <td>{{article.id}}</td>
+      <td>{{article.name}}</td>
+      <td>{{article.mobile}}</td>
+      <td>{{article.email}}</td>
+      <td>{{article.ans}}</td>
+      <td>{{article.username}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
+

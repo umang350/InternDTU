@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>InternDTU by ECELL</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="black">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta name="description" content="InternDTU by Entrepreneurship Cell DTU - Fostering the spirit of Entrepreneurship" />
+		<meta name="keywords" content="ecell, startup, dtu, InternDTU, internship" />
+		<meta name="author" content="Umang Chauhan" />
+
+		<meta property="og:title" content="InternDTU by Entrepreneurship Cell DTU"/>
+		<meta property="og:url" content="http://www.intern.ecelldtu.in"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="InternDTU by Entrepreneurship Cell DTU"/>
+		<meta property="og:description" content="Entrepreneurship Cell DTU - Fostering the spirit of Entrepreneurship"/>
+		<meta name="twitter:title" content="InternDTU by Entrepreneurship Cell DTU - Fostering the spirit of Entrepreneurship" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="http://www.intern.ecelldtu.in" />
+		<meta name="twitter:card" content="InternDTU by Entrepreneurship Cell DTU - Fostering the spirit of Entrepreneurship" />
+
+
+    	<link rel="shortcut icon" href="http://www.ecelldtu.in/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.9/css/uikit.min.css">
+    	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+			/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-image: url("{{ url_for('static', filename='cbg2.jpg') }}"); } 
+			#particles-js {
+			  position: fixed;
+			  z-index: -50;
+			  width: 100%;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			}
+			 .navbar {
+  				background-color: rgba(0, 0, 0, 0.9);
+  				font-weight: bold;
+			}
+
+			.navbar-light .navbar-nav .nav-link {
+  				color: #fff;
+  				font-family: 'Barlow', sans-serif;
+			} 
+
+			.navbar-light .navbar-brand {
+			  	font-size: 1.5rem;
+			  	color: #fff;
+			}
+
+
+			.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+				color: #fff;
+			}
+
+			.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+				color: #fff;
+			}
+
+			.navbar-light .navbar-nav .show > .nav-link,
+			.navbar-light .navbar-nav .active > .nav-link,
+			.navbar-light .navbar-nav .nav-link.show,
+			.navbar-light .navbar-nav .nav-link.active {
+				color: #fff;
+			}
+
+			
+		</style>
+	</head>
+	<body style="background: transparent !important;">
+		{% include 'includes/_navbar.html'  %}
+		<div class="container">
+			{% include 'includes/_messages.html' %}
+			{% block body %}{% endblock %}
+		</div>
+		<div id="particles-js">
+		</div> 
+
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>		
+	<script type="text/javascript">
+			particlesJS.load('particles-js', '{{ url_for('static', filename='particlesjs-config.json') }}', function() {
+			  console.log('callback - particles.js config loaded');
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <div class="jumbotron text-left" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79); padding: 12px ">
+  <h1 style="color: brown;">Dashboard <small style="color: white"> Welcome {{session.name}}</small><span style="padding-left:30%;">&emsp;</span><a href="/internships" class="btn btn-success btn-lg">View All Internships</a></h1>
+  {% if (session.isadmin == 1) %}
+  <p style="font-size: 1.5em;color: gold;font-family: Arial;"><a class="btn btn-success" href="/add_internship"> Add Internships</a><span> &nbsp;</span></p>
+  <p style="font-size: 1.5em;color: gold;font-family: Arial;">
+  Click on Id to View Applications</p>
+  <hr>
+  <table class="table table-dark table-stripped">
+    <tr>
+      <th>ID</th>
+      <th>Profile</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Skills</th>
+      <th>Grade</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for article in articles %}
+    <tr>
+      <td><a href="viewapplications/{{article.id}}">{{article.id}}</a></td>
+      <td>{{article.profile}}</td>
+      <td>{{article.title}}</td>
+      <td>{{article.company}}</td>
+      <td>{{article.skills}}</td>
+      <td>{{article.grade}}</td>
+     
+      <td><a href="edit_internship/{{article.id}}" class="btn btn-secondary pull-right">Edit</a></td>
+      <td>
+        <form class="" action="{{url_for('delete_article', id = article.id)}}" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" name="" value="Delete" class="btn btn-danger">
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+    
+    <div class="jumbotron" style="font-size: 1.6em;font-family: Arial;font-weight: bold;">
+      <a href="edit_details" style="color: white; float: right;" class="btn btn-warning btn-lg pull-right">Edit Details</a> 
+      <p>Name: {{data.name}} </p>
+      <p>Grade: {{data.grade}}</p>
+      <p>Profile: {{data.body}}</p>
+      <p>Title: {{data.title}}</p>
+      <p>Mobile: {{data.mobile}}</p>
+      <p>Skills: {{data.skills}}</p>
+      <p>Email : {{data.email}}</p>
+      <p>Branch : {{data.branch}}</p>
+      <p>Year : {{data.year}}</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

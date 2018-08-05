@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1 style="color: white">Post New Ticket : To be Posted By {{seller}}</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.name, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.email, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.mobile, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.paid, class="form-control")}}
+    </div>
+    <div class="form-group" style="color: white; font-size: 1.5em">
+      {{render_field(form.balance, class="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+{% endblock %}

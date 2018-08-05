@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <!-- <h1>LOGIN</h1>
+  <form action="" method="POST" style="font-size: 1.8em;color: white;">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" name="username" class="form-control" value="{{request.form.username}}">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password" class="form-control" value="{{request.form.password}}">
+    </div>
+    <button type="submit" class="btn btn-primary" name="button">Submit</button>
+  </form>
+  <div class="" style="color: white;font-size: 2em;">
+    <p><em>Need an account? </em><a style="color: black" href="/register">Signup!!</a></p>
+    <p><em>Forgot your password? </em><a style="color: black" href="/reset">Reset!!</a></p>
+  </div> -->
+  <div class="jumbotron text-center" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.79); padding: 12px ">
+   <h1 style="text-align: center; margin-top: 7%; position: relative; color: white;">Login</h1>
+  <div class="row">
+    <div style="width: 50%; margin: 25px auto; position: relative; color: white;">
+        <form action="" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="username" placeholder="Username" required="true" value="{{request.form.username}}">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password" required="true" value="{{request.form.password}}">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
+            </div>
+        </form>
+        <p>Forgot Password? <a href="/reset" style="color: #ec0a39; font-weight: bold;">Click Here to Reset</a></p>
+        <p>Not Registered? <a href="/register" style="color: #ec0a39; font-weight: bold;">Sign Up</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

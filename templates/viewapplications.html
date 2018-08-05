@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+  <h1  style="color: white">Current Applications for ID : {{id}}</h1>
+  
+  <table class="table table-dark table-stripped">
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>About</th>
+      <th>Skills</th>
+      <th>Grade</th>
+      <th>Why Hire</th>
+      <th>Previous Experience</th>
+      <th>Skills Related</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+    </tr>
+    {% for article in articles %}
+    <tr>
+      <td>{{article.username}}</td>
+      <td>{{article.title}}</td>
+      <td>{{article.body}}</td>
+      <td>{{article.skills}}</td>
+      <td>{{article.grade}}</td>
+      <td>{{article.whyhire}}</td>
+      <td>{{article.prevexp}}</td>
+      <td>{{article.skillsrelated}}</td>
+      <td>{{article.mobile}}</td>
+      <td>{{article.email}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
+

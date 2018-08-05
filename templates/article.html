@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div style="color: white;background: #000c;padding: 32px;border-radius: 7px;">
+  <h1  style="white-space: normal;word-wrap: break-word;">{{article.title}}</h1>
+  <h5 style="white-space: normal;word-wrap: break-word;">by {{article.company}} posted on {{article.register_date.strftime("%d-%B-%y")}}</h5>
+  <hr>
+  <h2 style="white-space: normal;word-wrap: break-word;">Profile : {{article.profile}}</h2>
+  <hr>
+  <h2 style="white-space: normal;word-wrap: break-word;">Skills : {{article.skills}}</h2>
+  <hr>
+  <h2 style="white-space: normal;word-wrap: break-word;">Stipend(INR) : {{article.grade}}</h2>
+  <hr>
+  <h2 style="white-space: normal;word-wrap: break-word;">Company Info : {{article.info}}</h2>
+  <hr>
+  <a href="/apply/{{article.id}}" class="btn btn-lg btn-primary">Apply</a>
+</div>
+  
+{% endblock %}
