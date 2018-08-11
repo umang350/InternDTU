@@ -12,9 +12,6 @@ app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'memcached'
 app.config['SECRET_KEY'] = 'some key'
 
-# git clone https://github.com/umang350/flaskblogsip.git
-# mysql -h flasktest.ccrvuveqgzmp.ap-south-1.rds.amazonaws.com -u umang350root -p flasktest
-
 # Config MySQL
 app.config['MYSQL_HOST'] = 'rds host'
 app.config['MYSQL_USER'] = 'user'
